@@ -31,24 +31,4 @@ public class Volvo240 extends Car{
     public void decrementSpeed(double amount){
         currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
     }
-
-    /**
-     * Method-calls incrementSpeed if gas amount is between 0 and 1.
-     * @param amount Amount of applied gas.
-     */
-    public void gas(double amount){
-        if(amount >= 0 && amount <= 1)
-            incrementSpeed(amount);
-    }
-
-    /**
-     * Method-calls incrementSpeed if brake amount is between 0 and 1.
-     * @param amount Amount of applied brakes.
-     */
-    public void brake(double amount){
-        if(amount >= 0 && amount <= 1)
-            decrementSpeed(amount);
-    }
-
-
 }

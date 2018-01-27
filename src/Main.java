@@ -8,20 +8,38 @@ import java.util.Scanner;
 public class Main extends JPanel{
     public Saab95 saab = new Saab95();
     public Volvo240 volvo = new Volvo240();
-    List<Car> cars = new ArrayList<>(); // car[0] = VOLVO car[1] = SAAB
+    public Scania scania = new Scania();
+    public BilTransport bilTransport;
+
+
+    List<Car> cars = new ArrayList<>(); // car[0] = VOLVO car[1] = SAAB car[2] = SCANIA
     public Main(){
         saab.setPosition(new Point(50,50));
+        scania.setPosition(new Point(200,200));
         saab.startEngine();
         volvo.startEngine();
+        scania.startEngine();
         saab.gas(1);
         saab.gas(1);
         volvo.gas(1);
         volvo.gas(1);
+        scania.gas(1);
+        scania.gas(1);
         //volvo.turnLeft();
         //volvo.turnLeft();
         //volvo.turnLeft();
         cars.add(volvo);
         cars.add(saab);
+        cars.add(scania);
+
+        // TODO WORK-AROUND
+        scania.stopEngine();
+        scania.lowerRamp();
+        scania.startEngine();
+        // TODO WORK-AROUND
+
+
+        bilTransport = new BilTransport(scania);
     }
 
     public void paint(Graphics g){
@@ -76,8 +94,8 @@ public class Main extends JPanel{
         Scanner scanner = new Scanner(System.in);
         String choice;
         Car selectedCar = new Volvo240();
-        while(!(selectedCar.equals(saab) || selectedCar.equals(volvo))){
-            System.out.println("Select vehicle [S] Saab or [V] Volvo: ");
+        while(!(selectedCar.equals(saab) || selectedCar.equals(volvo) || selectedCar.equals(scania))){
+            System.out.println("Select vehicle [S] Saab, [V] Volvo or [B] Biltransport: ");
             choice = scanner.next();
             switch (choice){
                 case "S":
@@ -86,13 +104,19 @@ public class Main extends JPanel{
                 case "V":
                     selectedCar = volvo;
                     break;
+                case "B":
+                    selectedCar = scania;
+                    break;
             }
-
         }
         boolean done = false;
         while(!done){
             System.out.println("This vehicle's currentSpeed: "+selectedCar.getCurrentSpeed()+" pixels/move");
             System.out.println("Select action [M] Move, [L] Turn Left or [R] Turn Right: ");
+            if (selectedCar.equals(scania)){
+                System.out.println("Additional actions for Scania;");
+                System.out.println("[O] Lower Ramp, [H] Lift Ramp, [U] Detach Vehicle, [A] Attach Vehicle: ");
+            }
             choice = scanner.next();
             switch (choice){
                 case "M":
@@ -128,8 +152,32 @@ public class Main extends JPanel{
                     selectedCar.turnRight();
                     done = true;
                     break;
+                case "O":
+                    if(selectedCar instanceof Scania) {
+                        scania.lowerRamp();
+                        done = true;
+                    }
+                    break;
+                case "H":
+                    if(selectedCar instanceof Scania) {
+                        scania.liftRamp();
+                        done = true;
+                    }
+                    break;
+                case "A":
+                    if(selectedCar instanceof Scania) {
+                        bilTransport.attachVehicle(saab);
+                        bilTransport.attachVehicle(volvo);
+                        done = true;
+                    }
+                    break;
+                case "U":
+                    if(selectedCar instanceof Scania) {
+                        bilTransport.detachVehicle();
+                        done = true;
+                    }
+                    break;
             }
-
         }
         //selectedCar.turnRight();
     }

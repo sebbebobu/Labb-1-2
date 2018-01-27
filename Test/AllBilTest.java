@@ -12,6 +12,9 @@ class AllCarTest {
 
     Saab95 saab = new Saab95();
     Volvo240 volvo = new Volvo240();
+    Scania scania = new Scania();
+    BilTransport bilTransport;
+
     @BeforeEach
     void setUp(){
         /*
@@ -21,6 +24,8 @@ class AllCarTest {
         */
         saab = new Saab95();
         volvo = new Volvo240();
+        scania = new Scania();
+        bilTransport = new BilTransport(scania);
     }
 
     @Test
@@ -59,6 +64,9 @@ class AllCarTest {
         assertTrue(innanTurbo < efterTurbo);
 
         assertEquals(1.25,volvo.speedFactor());
+
+
+        assertEquals(scania.enginePower/100,scania.speedFactor());
     }
 /*
     @Test
@@ -178,6 +186,34 @@ class AllCarTest {
         speedFactor = volvo.speedFactor();
         assertTrue(speedFactor + innanGas == efterGas);
         // Helt enkelt det metoden Gas gör. (UTAN turbo)
+
+        // ------------------ SCANIA -------------------------------
+        innanGas = scania.getCurrentSpeed();
+        scania.gas(0.0);
+        efterGas = scania.getCurrentSpeed();
+        assertTrue(innanGas == efterGas);
+        // Gas utan gas är ingen gas...
+
+        innanGas = scania.getCurrentSpeed();
+        scania.gas(-1);
+        efterGas = scania.getCurrentSpeed();
+        assertTrue(innanGas == efterGas);
+        // Om gasen är negativ - ska inte currentSpeed ändras.
+
+        innanGas = scania.getCurrentSpeed();
+        scania.gas(9000);
+        efterGas = scania.getCurrentSpeed();
+        assertTrue(innanGas == efterGas);
+        // Om gasen är mer än 1 - ska inte currentSpeed ändras.
+
+        innanGas = scania.getCurrentSpeed();
+        scania.gas(1.0);
+        efterGas = scania.getCurrentSpeed();
+        assertTrue(innanGas < efterGas);
+        // currentSpeed borde ha ökat.
+
+        speedFactor = scania.speedFactor();
+        assertTrue(speedFactor + innanGas == efterGas);
     }
 
     @Test
@@ -238,10 +274,43 @@ class AllCarTest {
         speedFactor = volvo.speedFactor();
         assertTrue(innanBroms - speedFactor == efterBroms || efterBroms == 0);
         // Helt enkelt det metoden Brake gör. (med eller utan turbo)
+
+        // ----------------------- SCANIA ----------------------------------------------
+
+        innanBroms = scania.getCurrentSpeed();
+        scania.brake(0.0);
+        efterBroms = scania.getCurrentSpeed();
+        assertTrue(innanBroms == efterBroms);
+        // Broms utan broms är ingen broms...
+
+        innanBroms = scania.getCurrentSpeed();
+        scania.brake(-1);
+        efterBroms = scania.getCurrentSpeed();
+        assertTrue(innanBroms == efterBroms);
+        // Om Bromsen är negativ - ska inte currentSpeed ändras.
+
+        innanBroms = scania.getCurrentSpeed();
+        scania.brake(9000);
+        efterBroms = scania.getCurrentSpeed();
+        assertTrue(innanBroms == efterBroms);
+        // Om Bromsen är mer än 1 - ska inte currentSpeed ändras.
+
+        innanBroms = scania.getCurrentSpeed();
+        scania.brake(1.0);
+        efterBroms = scania.getCurrentSpeed();
+        assertTrue(innanBroms >= efterBroms);
+        // currentSpeed borde ha ökat. KAN vara lika om båda är 0
+
+        speedFactor = scania.speedFactor();
+        assertTrue(innanBroms - speedFactor == efterBroms || efterBroms == 0);
+        // Helt enkelt det metoden Brake gör. (med eller utan turbo)
     }
 
     @Test
     void startEngine() {
+        saab.isEngineOn();
+
+
         assertEquals(0.0, saab.getCurrentSpeed());
         // I Cars c-tor anropas stopEngine, vilket sätter currentSpeed till 0.
         saab.startEngine();
@@ -409,4 +478,64 @@ class AllCarTest {
         Point efter = saab.getPosition();
         assertTrue(innan != efter);
     }
+
+    @Test
+    void testRamp(){
+        scania.liftRamp();
+        assertEquals(0,scania.getBedAngle());
+        scania.lowerRamp();
+        assertEquals(70,scania.getBedAngle());
+        scania.setBedAngle(45);
+        assertEquals(45,scania.getBedAngle());
+    }
+
+    @Test
+    void testAttach(){
+        saab.setPosition(new Point(50,50));
+        scania.setPosition(new Point(50,49));
+        scania.lowerRamp(); // Will NOT work if ramp is not lowered!
+        bilTransport.attachVehicle(saab);
+        assertEquals(scania.getPosition(),saab.getPosition());
+        bilTransport.detachVehicle();
+        assertFalse(scania.getPosition() == saab.getPosition());
+        // Vehicle has been detached and moved! NORTH
+
+        scania.turnLeft();
+        saab.turnLeft();
+        saab.setPosition(new Point(50,50));
+        scania.setPosition(new Point(49,50));
+        scania.lowerRamp();
+        bilTransport.attachVehicle(saab);
+        assertEquals(scania.getPosition(),saab.getPosition());
+        bilTransport.detachVehicle();
+        assertFalse(scania.getPosition() == saab.getPosition());
+        // WEST
+
+
+
+        scania.turnLeft();
+        saab.turnLeft();
+        saab.setPosition(new Point(50,49));
+        scania.setPosition(new Point(50,50));
+        scania.lowerRamp();
+        bilTransport.attachVehicle(saab);
+        assertEquals(scania.getPosition(),saab.getPosition());
+        bilTransport.detachVehicle();
+        assertFalse(scania.getPosition() == saab.getPosition());
+        // SOUTH
+
+
+        scania.turnLeft();
+        saab.turnLeft();
+        saab.setPosition(new Point(49,50));
+        scania.setPosition(new Point(50,50));
+        scania.lowerRamp();
+        bilTransport.attachVehicle(saab);
+        assertEquals(scania.getPosition(),saab.getPosition());
+        bilTransport.detachVehicle();
+        assertFalse(scania.getPosition() == saab.getPosition());
+        // EAST
+    }
+
+
 }

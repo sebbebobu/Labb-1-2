@@ -7,6 +7,12 @@ public abstract class Car implements Movable{
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car
 
+    protected boolean engineOn;
+
+    public boolean isEngineOn() {
+        return engineOn;
+    }
+
     public String getModelName() {
         return modelName;
     }
@@ -55,6 +61,7 @@ public abstract class Car implements Movable{
      * Method which sets currentSpeed to 0.1.
      */
     public void startEngine(){
+        engineOn = true;
         currentSpeed = 0.1;
     }
 
@@ -62,6 +69,7 @@ public abstract class Car implements Movable{
      * Method which stop the engine and sets currentSpeed to 0.
      */
     public void stopEngine(){
+        engineOn = false;
         currentSpeed = 0;
     }
 
@@ -147,7 +155,28 @@ public abstract class Car implements Movable{
                 break;
         }
     }
-    public abstract void gas(double amount);
 
-    public abstract void brake(double amount);
+    public abstract double speedFactor();
+
+    public abstract void incrementSpeed(double amount);
+
+    public abstract void decrementSpeed(double amount);
+
+    /**
+     * Method-calls incrementSpeed if gas amount is between 0 and 1.
+     * @param amount Amount of applied gas.
+     */
+    public void gas(double amount){
+        if(amount >= 0 && amount <= 1)
+            incrementSpeed(amount);
+    }
+
+    /**
+     * Method-calls incrementSpeed if brake amount is between 0 and 1.
+     * @param amount Amount of applied brakes.
+     */
+    public void brake(double amount){
+        if(amount >= 0 && amount <= 1)
+            decrementSpeed(amount);
+    }
 }
