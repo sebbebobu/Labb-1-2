@@ -20,15 +20,15 @@
     <SUITE FILE_PATH="coverage/Labb_1$Main.coverage" NAME="Main Coverage Results" MODIFIED="1516978584892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Labb_1_master$AllBilTest.coverage" NAME="AllBilTest Coverage Results" MODIFIED="1516806776553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Labb_1$Saab95Test_startEngine.coverage" NAME="Saab95Test.startEngine Coverage Results" MODIFIED="1516724548842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Labb_1_2$AllCarTest.coverage" NAME="AllCarTest Coverage Results" MODIFIED="1517069253434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Labb_1_2$AllCarTest.coverage" NAME="AllCarTest Coverage Results" MODIFIED="1517139971056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Lab1del2PM.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lab1del2PM.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state relative-caret-position="510">
+              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -37,18 +37,9 @@
       <file leaf-file-name="Scania.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Scania.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding>
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1684#1685#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="642">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +47,8 @@
       <file leaf-file-name="BilTransport.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BilTransport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="350">
+              <caret line="85" column="71" lean-forward="false" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,8 +59,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+            <state relative-caret-position="384">
+              <caret line="206" column="44" lean-forward="true" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -78,8 +69,8 @@
       <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
-              <caret line="147" column="38" lean-forward="true" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
+            <state relative-caret-position="2159">
+              <caret line="147" column="38" lean-forward="false" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
               <folding>
                 <element signature="e#365#366#0" expanded="true" />
                 <element signature="e#396#397#0" expanded="true" />
@@ -91,8 +82,8 @@
       <file leaf-file-name="AllBilTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/AllBilTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="530" column="39" lean-forward="false" selection-start-line="530" selection-start-column="39" selection-end-line="530" selection-end-column="39" />
+            <state relative-caret-position="163">
+              <caret line="490" column="0" lean-forward="true" selection-start-line="490" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -191,8 +182,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,8 +211,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AllCarTest">
     <configuration name="AllBilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Labb1" />
@@ -553,8 +544,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AllCarTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AllCarTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.AllCarTest.testAttach" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.AllBilTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.Saab95Test" />
@@ -575,9 +566,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllCarTest - 2018.01.27 at 16h 59m 09s.xml">
-      <configuration name="AllCarTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllCarTest - 2018.01.27 at 17h 00m 42s.xml">
       <configuration name="AllCarTest" configurationId="JUnit" />
     </history-entry>
@@ -602,6 +590,9 @@
     <history-entry file="AllCarTest - 2018.01.27 at 17h 07m 34s.xml">
       <configuration name="AllCarTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllCarTest - 2018.01.28 at 12h 46m 12s.xml">
+      <configuration name="AllCarTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="AllCarTest_testAttach - 2018.01.27 at 16h 53m 51s.xml">
       <configuration name="AllCarTest.testAttach" configurationId="JUnit" />
     </history-entry>
@@ -620,7 +611,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3075616" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3075616" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -629,7 +620,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39870688" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -706,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
           <caret line="97" column="9" lean-forward="false" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="54" lean-forward="false" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,18 +1019,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lab1del2PM.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="147" column="38" lean-forward="true" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
+        <state relative-caret-position="2159">
+          <caret line="147" column="38" lean-forward="false" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
           <folding>
             <element signature="e#365#366#0" expanded="true" />
             <element signature="e#396#397#0" expanded="true" />
@@ -1062,35 +1038,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Lab1del2PM.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="29" lean-forward="true" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        <state relative-caret-position="510">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scania.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="642">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="206" column="44" lean-forward="true" selection-start-line="206" selection-start-column="44" selection-end-line="206" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BilTransport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="350">
+          <caret line="85" column="71" lean-forward="false" selection-start-line="85" selection-start-column="71" selection-end-line="85" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1099,8 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/AllBilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="530" column="39" lean-forward="false" selection-start-line="530" selection-start-column="39" selection-end-line="530" selection-end-column="39" />
+        <state relative-caret-position="163">
+          <caret line="490" column="0" lean-forward="true" selection-start-line="490" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
           <folding />
         </state>
       </provider>

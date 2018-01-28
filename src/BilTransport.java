@@ -5,7 +5,7 @@ import java.util.List;
 public class BilTransport {
     protected Scania scania;
     protected List<Car> cars;
-    protected final int maxCapacity = 3; // Not something usually changeable...
+    protected final int maxCapacity = 1; // Not something usually changeable...
     protected boolean rampUp;
 
     //TODO OR NOT TODO; If our truck turns - none of our loaded vehicles turn! :D
@@ -74,16 +74,16 @@ public class BilTransport {
             Car car = cars.get(cars.size() - 1);
             switch (scania.getDirection()){
                 case NORTH:
-                    car.setPosition(new Point(scania.getPosition().x, scania.getPosition().y+25));
+                    car.setPosition(new Point(scania.getPosition().x, scania.getPosition().y+50));
                     break;
                 case SOUTH:
-                    car.setPosition(new Point(scania.getPosition().x, scania.getPosition().y-25));
+                    car.setPosition(new Point(scania.getPosition().x, scania.getPosition().y-50));
                     break;
                 case WEST:
-                    car.setPosition(new Point(scania.getPosition().x+25, scania.getPosition().y));
+                    car.setPosition(new Point(scania.getPosition().x+50, scania.getPosition().y));
                     break;
                 case EAST:
-                    car.setPosition(new Point(scania.getPosition().x-25, scania.getPosition().y));
+                    car.setPosition(new Point(scania.getPosition().x-50, scania.getPosition().y));
                     break;
             }
             cars.remove(car);

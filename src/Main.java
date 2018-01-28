@@ -15,6 +15,7 @@ public class Main extends JPanel{
     List<Car> cars = new ArrayList<>(); // car[0] = VOLVO car[1] = SAAB car[2] = SCANIA
     public Main(){
         saab.setPosition(new Point(50,50));
+        volvo.setPosition(new Point(200,290));
         scania.setPosition(new Point(200,200));
         saab.startEngine();
         volvo.startEngine();
@@ -28,9 +29,10 @@ public class Main extends JPanel{
         //volvo.turnLeft();
         //volvo.turnLeft();
         //volvo.turnLeft();
+        cars.add(scania);
         cars.add(volvo);
         cars.add(saab);
-        cars.add(scania);
+
 
         // TODO WORK-AROUND
         scania.stopEngine();
@@ -45,11 +47,34 @@ public class Main extends JPanel{
     public void paint(Graphics g){
         super.paint(g);
         for (Car c : cars){
-            g.setColor(c.getColor());
             if(c.getDirection() == Car.dir.NORTH || c.getDirection() == Car.dir.SOUTH){
-                g.fillRect(c.position.x-10,c.position.y-20,20,40);
-                g.setColor(Color.black);
-                g.drawString(c.getModelName(),c.position.x-20,c.position.y-25);
+                if(c instanceof Scania){
+                    if (c.getDirection().equals(Car.dir.NORTH)){
+                        g.setColor(c.getColor());
+                        g.fillRect(c.position.x-13,c.position.y-45,26,15);
+                        g.setColor(Color.gray);
+                        g.fillRect(c.position.x-15,c.position.y-30,30,60);
+                        if(!bilTransport.isRampUp()) g.fillRect(c.position.x-12,c.position.y+30,24,25);
+                        g.setColor(Color.black);
+                        g.drawString(c.getModelName(),c.position.x-20,c.position.y-50);
+
+                    }
+                    if (c.getDirection().equals(Car.dir.SOUTH)){
+                        g.setColor(c.getColor());
+                        g.fillRect(c.position.x-13,c.position.y+30,26,15);
+                        g.setColor(Color.gray);
+                        g.fillRect(c.position.x-15,c.position.y-30,30,60);
+                        if(!bilTransport.isRampUp()) g.fillRect(c.position.x-12,c.position.y-55,24,25);
+                        g.setColor(Color.black);
+                        g.drawString(c.getModelName(),c.position.x-20,c.position.y-50);
+                    }
+                }
+                else {
+                    g.setColor(c.getColor());
+                    g.fillRect(c.position.x-10,c.position.y-20,20,40);
+                    g.setColor(Color.black);
+                    g.drawString(c.getModelName(),c.position.x-20,c.position.y-25);
+                }
                 g.setColor(Color.white);
                 g.drawLine(c.position.x,c.position.y-20,c.position.x,c.position.y+20);
                 if(c.getDirection() == Car.dir.NORTH){ // UPP
@@ -63,10 +88,32 @@ public class Main extends JPanel{
 
             }
             else if (c.getDirection() == Car.dir.WEST || c.getDirection() == Car.dir.EAST){
-                g.setColor(c.getColor());
-                g.fillRect(c.position.x-20,c.position.y-10,40,20);
-                g.setColor(Color.black);
-                g.drawString(c.getModelName(),c.position.x-25,c.position.y-15);
+                if(c instanceof Scania){
+                    if (c.getDirection().equals(Car.dir.WEST)){
+                        g.setColor(c.getColor());
+                        g.fillRect(c.position.x-45,c.position.y-13,15,26);
+                        g.setColor(Color.gray);
+                        g.fillRect(c.position.x-30,c.position.y-15,60,30);
+                        if(!bilTransport.isRampUp()) g.fillRect(c.position.x+30,c.position.y-12,24,25);
+                        g.setColor(Color.black);
+                        g.drawString(c.getModelName(),c.position.x-20,c.position.y-20);
+                    }
+                    if (c.getDirection().equals(Car.dir.EAST)){
+                        g.setColor(c.getColor());
+                        g.fillRect(c.position.x+30,c.position.y-13,15,26);
+                        g.setColor(Color.gray);
+                        g.fillRect(c.position.x-30,c.position.y-15,60,30);
+                        if(!bilTransport.isRampUp()) g.fillRect(c.position.x-54,c.position.y-12,24,25);
+                        g.setColor(Color.black);
+                        g.drawString(c.getModelName(),c.position.x-20,c.position.y-20);
+                    }
+                }
+                else {
+                    g.setColor(c.getColor());
+                    g.fillRect(c.position.x - 20, c.position.y - 10, 40, 20);
+                    g.setColor(Color.black);
+                    g.drawString(c.getModelName(), c.position.x - 25, c.position.y - 15);
+                }
                 g.setColor(Color.white);
                 g.drawLine(c.position.x-20,c.position.y,c.position.x+20,c.position.y);
                 if(c.getDirection() == Car.dir.WEST){ // VÄNSTER
@@ -146,10 +193,20 @@ public class Main extends JPanel{
                     break;
                 case "L":
                     selectedCar.turnLeft();
+                    if(selectedCar instanceof Scania) {
+                        for(Car car : bilTransport.cars){
+                            car.turnLeft();
+                        }
+                    }
                     done = true;
                     break;
                 case "R":
                     selectedCar.turnRight();
+                    if(selectedCar instanceof Scania) {
+                        for(Car car : bilTransport.cars){
+                            car.turnRight();
+                        }
+                    }
                     done = true;
                     break;
                 case "O":
